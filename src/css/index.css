@@ -1,6 +1,7 @@
 .app-container {
-  background-color: red;
+  /* background-color: gainsboro; */
 }
+
 section {
   float: right;
   width: 73%;
@@ -12,4 +13,21 @@ aside {
 footer {
   position: absolute;
   bottom: 1rem;
+}
+
+.filter-component-container {
+  border: 2px solid red;
+  padding: 1rem;
+}
+.filter-title {
+  margin: 0;
+  font-size: 16px;
+}
+.launch-properties {
+}
+.launch-properties-title {
+  font-size: 14px;
+  text-align: center;
+  font-weight: 500;
+  border-bottom: 1px solid lightgrey;
 }

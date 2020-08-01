@@ -3,10 +3,10 @@ import React from "react";
 function FilterComponent(props) {
   return (
     <>
-      <div>
-        <h1>Filters</h1>
-        <div className="launch-year">
-          <h3>Launch Year</h3>
+      <div className="filter-component-container">
+        <h1 className="filter-title">Filters</h1>
+        <div className="launch-properties">
+          <h3 className="launch-properties-title">Launch Year</h3>
           <button>2006</button>
           <button>2007</button>
           <button>2008</button>
@@ -24,12 +24,12 @@ function FilterComponent(props) {
           <button>2020</button>
         </div>
         <div className="successful-launch">
-          <h3>Successful Launch</h3>
+          <h3 className="launch-properties-title">Successful Launch</h3>
           <button>True</button>
           <button>False</button>
         </div>
         <div className="successful-landing">
-          <h3>Successful Landing</h3>
+          <h3 className="launch-properties-title">Successful Landing</h3>
           <button>True</button>
           <button>False</button>
         </div>

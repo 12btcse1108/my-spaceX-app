@@ -1,0 +1,15 @@
+.app-container {
+  background-color: red;
+}
+section {
+  float: right;
+  width: 73%;
+}
+aside {
+  float: left;
+  width: 20%;
+}
+footer {
+  position: absolute;
+  bottom: 1rem;
+}

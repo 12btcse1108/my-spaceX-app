@@ -3,10 +3,7 @@ import FilterComponent from "./FilterComponent";
 import MissionsList from "./MissionsList";
 
 function Home(props) {
-  const [successfulLaunch, setSuccessfulLaunch] = useState(true);
-  const [launchFailed, setLaunchFailed] = useState(false);
   const [filterValue, setFilterValue] = useState({});
-  console.log(filterValue);
   const successLaunch = (label) => {
     setFilterValue((prevState) => ({ ...prevState, launch_success: label }));
   };
@@ -31,7 +28,11 @@ function Home(props) {
       <section>
         <MissionsList filterValue={filterValue} />
       </section>
-      <footer>Developer Name: Nitin Verma</footer>
+      <footer>
+        <h4>
+          Developed by: <span className="footer-credit">Nitin Verma</span>
+        </h4>
+      </footer>
     </>
   );
 }

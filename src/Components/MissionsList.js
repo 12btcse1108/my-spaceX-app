@@ -12,9 +12,11 @@ function MissionList(props) {
       .join("&");
     console.log(queryString);
     const parse_url =
-      filterValue.launch_year !== undefined
+      Object.keys(filterValue).length > 0
         ? `https://api.spaceXdata.com/v3/launches?limit=100&${queryString}`
         : `https://api.spaceXdata.com/v3/launches?limit=100`;
+    console.log(parse_url);
+
     // const url = `https://api.spaceXdata.com/v3/launches?limit=100&launch_success=${filterValue.launch_success}`;
     setIsLoading(true);
     fetch(parse_url)
@@ -30,15 +32,23 @@ function MissionList(props) {
         }
       );
   }, [filterValue]);
+  // console.log(missionData[0]);
   return (
     <>
       {isLoading ? (
         <div>Loading ....</div>
       ) : (
         <div className="mission-list-container">
-          {missionData.length > 0 && !isLoading
-            ? missionData.map((mission) => <MissionCard mission={mission} />)
-            : ""}
+          {missionData.length > 0 ? (
+            missionData.map((mission) => (
+              <MissionCard
+                key={String(mission.flight_number)}
+                mission={mission}
+              />
+            ))
+          ) : (
+            <div>No Data</div>
+          )}
         </div>
       )}
     </>

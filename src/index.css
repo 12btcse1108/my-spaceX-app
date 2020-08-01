@@ -1,14 +1,23 @@
 section {
   float: right;
   width: 73%;
+  min-height: calc(100vh-20px);
+}
+@media only screen and (max-width: 425px) {
+  section {
+    width: 100%;
+    margin: auto;
+  }
 }
 aside {
   float: left;
   width: 20%;
 }
-footer {
-  position: absolute;
-  bottom: 1rem;
+@media only screen and (max-width: 425px) {
+  aside {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
 }
 .app-container-title {
   font-size: 20px;
@@ -17,15 +26,18 @@ footer {
 }
 
 .filter-component-container {
-  /* border: 2px solid red; */
   background-color: #ffffff;
   padding: 1rem;
+}
+@media only screen and (max-width: 425px) {
+  .filter-component-container {
+    max-width: 60%;
+    margin: auto;
+  }
 }
 .filter-title {
   margin: 0;
   font-size: 16px;
-}
-.launch-properties {
 }
 .launch-properties-title {
   font-size: 14px;
@@ -39,8 +51,15 @@ footer {
   margin-bottom: 1rem;
 }
 
-button {
+.launch-years-button {
   background-color: #c6d9a8;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.375rem 0.75rem;
+  cursor: pointer;
+}
+.launch-years-button-active {
+  background-color: #7cba01;
   border: none;
   border-radius: 0.25rem;
   padding: 0.375rem 0.75rem;
@@ -58,6 +77,13 @@ button {
   padding: 1rem;
   margin-bottom: 1rem;
   border-radius: 0.25rem;
+}
+@media only screen and (max-width: 425px) {
+  .mission-card-container {
+    min-width: 60%;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
 }
 .image-container {
   width: 11rem;
@@ -77,4 +103,8 @@ button {
   font-weight: 700;
   padding-top: 1rem;
   color: #6068a5;
+}
+.footer-credit {
+  font-size: 16px;
+  font-weight: 500;
 }

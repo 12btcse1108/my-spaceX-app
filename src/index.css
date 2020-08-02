@@ -74,8 +74,30 @@ footer {
   justify-content: flex-start;
   flex-wrap: wrap;
 }
+@media screen and (max-width: 700px) {
+  .mission-list-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-left: 5rem;
+  }
+}
 .loading-container {
   min-height: 85vh;
+}
+@media screen and (max-width: 700px) {
+  .mission-card-container {
+    min-width: 60%;
+    margin-left: 5rem;
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (min-width: 701px) and (max-width: 1024) {
+  .mission-card-container {
+    min-width: 40%;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
 }
 .mission-card-container {
   /* border: 2px solid rgb(145, 139, 139); */
@@ -83,15 +105,9 @@ footer {
   padding: 1rem;
   margin: 0 1rem 1rem 0;
   border-radius: 0.25rem;
-  max-width: 20%;
+  max-width: 30%;
 }
-@media only screen and (max-width: 425px) {
-  .mission-card-container {
-    min-width: 60%;
-    margin: auto;
-    margin-bottom: 1rem;
-  }
-}
+
 .image-container {
   width: 11rem;
   height: 11rem;

@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import MissionCard from "./MissionCard";
 
 function MissionList(props) {
-  const [missionData, setMissionData] = useState([]);
+  const { initialData } = { ...props };
+  const [missionData, setMissionData] = useState(initialData);
   const [isLoading, setIsLoading] = useState(false);
   const [errors, setErrors] = useState("");
   const { filterValue } = { ...props };
@@ -14,7 +15,7 @@ function MissionList(props) {
     const parse_url =
       Object.keys(filterValue).length > 0
         ? `https://api.spaceXdata.com/v3/launches?limit=100&${queryString}`
-        : `https://api.spaceXdata.com/v3/launches?limit=100`;
+        : ``;
     console.log(parse_url);
 
     // const url = `https://api.spaceXdata.com/v3/launches?limit=100&launch_success=${filterValue.launch_success}`;

@@ -3,6 +3,7 @@ import FilterComponent from "./FilterComponent";
 import MissionsList from "./MissionsList";
 
 function Home(props) {
+  const { initialData } = { ...props };
   const [filterValue, setFilterValue] = useState({});
   const successLaunch = (label) => {
     setFilterValue((prevState) => ({ ...prevState, launch_success: label }));
@@ -26,7 +27,7 @@ function Home(props) {
         />
       </aside>
       <section>
-        <MissionsList filterValue={filterValue} />
+        <MissionsList filterValue={filterValue} initialData={initialData} />
         <footer>
           <h4>
             Developed by: <span className="footer-credit">Nitin Verma</span>

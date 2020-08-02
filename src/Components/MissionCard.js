@@ -18,7 +18,7 @@ function MissionCard(props) {
             Mission Ids:{" "}
             <span className="mission-data-span">
               {mission.mission_id.length > 0
-                ? mission.mission_id.map((id) => <li>{id}</li>)
+                ? mission.mission_id.map((id) => <li key={id}>{id}</li>)
                 : "N/A"}
             </span>
           </h4>

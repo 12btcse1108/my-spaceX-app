@@ -25,7 +25,9 @@ app.get("/", (req, res) => {
         return res.send(
           data.replace(
             '<div id="root"></div>',
-            `<div id="root">${clientApp}</div>`
+            `<script>window.__initialData__=${JSON.stringify(
+              result
+            )}</script><div id="root">${clientApp}</div>`
           )
         );
       });

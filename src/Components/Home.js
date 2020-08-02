@@ -27,12 +27,12 @@ function Home(props) {
       </aside>
       <section>
         <MissionsList filterValue={filterValue} />
+        <footer>
+          <h4>
+            Developed by: <span className="footer-credit">Nitin Verma</span>
+          </h4>
+        </footer>
       </section>
-      <footer>
-        <h4>
-          Developed by: <span className="footer-credit">Nitin Verma</span>
-        </h4>
-      </footer>
     </>
   );
 }

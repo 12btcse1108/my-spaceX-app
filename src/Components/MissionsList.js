@@ -36,7 +36,7 @@ function MissionList(props) {
   return (
     <>
       {isLoading ? (
-        <div>Loading ....</div>
+        <div className="loading-container">Loading ....</div>
       ) : (
         <div className="mission-list-container">
           {missionData.length > 0 ? (
@@ -47,7 +47,7 @@ function MissionList(props) {
               />
             ))
           ) : (
-            <div>No Data</div>
+            <div className="loading-container">No Data</div>
           )}
         </div>
       )}

@@ -1,7 +1,6 @@
 section {
   float: right;
   width: 73%;
-  min-height: calc(100vh-20px);
 }
 @media only screen and (max-width: 425px) {
   section {
@@ -19,15 +18,19 @@ aside {
     margin-bottom: 1rem;
   }
 }
+footer {
+  text-align: center;
+}
 .app-container-title {
   font-size: 20px;
   font-weight: 700;
-  margin: 1rem 0;
+  margin: 1rem 1rem;
 }
 
 .filter-component-container {
   background-color: #ffffff;
   padding: 1rem;
+  margin-left: 1rem;
 }
 @media only screen and (max-width: 425px) {
   .filter-component-container {
@@ -68,15 +71,19 @@ aside {
 
 .mission-list-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
+}
+.loading-container {
+  min-height: 85vh;
 }
 .mission-card-container {
   /* border: 2px solid rgb(145, 139, 139); */
   background-color: #ffffff;
   padding: 1rem;
-  margin-bottom: 1rem;
+  margin: 0 1rem 1rem 0;
   border-radius: 0.25rem;
+  max-width: 20%;
 }
 @media only screen and (max-width: 425px) {
   .mission-card-container {
@@ -89,6 +96,7 @@ aside {
   width: 11rem;
   height: 11rem;
   background-color: #f2f2f2;
+  margin: auto;
 }
 .image-container img {
   width: 11rem;
